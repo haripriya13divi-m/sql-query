@@ -1,0 +1,26 @@
+#Find Top 3 Highest Salaries
+
+SELECT *
+FROM (
+    SELECT *,
+           DENSE_RANK() OVER (ORDER BY Salary DESC) AS rnk
+    FROM Employee
+) t
+WHERE rnk <= 3;
+#Find Highest Salary in Each Department
+SELECT *
+FROM (
+    SELECT *,
+           DENSE_RANK() OVER (
+               PARTITION BY Department
+               ORDER BY Salary DESC
+           ) AS rnk
+    FROM Employee
+) t
+WHERE rnk = 1;
+#Find Employees Earning More Than Their Manager
+SELECT e.Emp_Name
+FROM Employee e
+JOIN Employee m
+ON e.Manager_ID = m.Employee_ID
+WHERE e.Salary > m.Salary;
