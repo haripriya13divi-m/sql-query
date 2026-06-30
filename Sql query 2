@@ -24,3 +24,4 @@ FROM Employee e
 JOIN Employee m
 ON e.Manager_ID = m.Employee_ID
 WHERE e.Salary > m.Salary;
+ .
