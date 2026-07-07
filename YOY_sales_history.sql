@@ -1,4 +1,4 @@
--- select * from sales;
+-- select *  from sales;
 -- Problem Statement:
 -- You are given a sales table containing annual performance metrics for multiple regional stores. 
 -- Write a SQL query to display a report showing each store's current year sales, the previous year sales, 
