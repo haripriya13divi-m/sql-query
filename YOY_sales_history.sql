@@ -1,6 +1,6 @@
 -- select *  from sales;
 -- Problem Statement:
--- You are given  sales table containing annual performance metrics for multiple regional stores. 
+-- You are given sales table containing annual performance metrics for multiple regional stores. 
 -- Write a SQL query to display a report showing each store's current year sales, the previous year sales, 
 -- and the percentage growth or decline compared to the prior year. 
 with Sales_summary as( select store_id,
