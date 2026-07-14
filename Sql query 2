@@ -1,5 +1,5 @@
 #Find Top 3 Highest Salaries
-
+ 
 SELECT *
 FROM (
     SELECT *,
